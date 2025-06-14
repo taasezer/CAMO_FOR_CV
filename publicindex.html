@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kişi Bilgileri Arama</title>
+</head>
+<body>
+<h1>Kişi Bilgileri Arama</h1>
+<form id="searchForm">
+    <label for="name">İsim:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Ara</button>
+</form>
+<div id="results"></div>
+
+<script>
+    document.getElementById('searchForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const response = await fetch('/search', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `name=${name}`
+        });
+        const data = await response.json();
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = data.files.map(file => `<div>${file}</div>`).join('');
+    });
+</script>
+</body>
+</html>
