@@ -28,7 +28,7 @@ pip install opencv-python pytesseract
 # Windows için: 
 - https://github.com/tesseract-ocr/tesseract/releases adresinden uygun sürüm indirilmeli
 - Kurulum sonrası PATH değişkenine tesseract yolu eklenmeli
-- 
+
 ### 2. DLL Derlenmesi (C++ Video Yakalama Modülü)
 - Proje içinde bulunan C++ kaynak kodunu uygun derleyici (MinGW, Visual Studio) ile derleyin:
 ```bash
@@ -81,7 +81,6 @@ Lütfen hata bildirmek veya özellik talep etmek için issue açınız. Pull req
 ### İletişim
 - Herhangi bir soru veya destek talebi için aşağıdaki iletişim adresleri kullanılabilir:
 
-# E-posta: [taha.sezer@istun.edu.tr
-]
+# E-posta: [taha.sezer@istun.edu.tr]
 
 
